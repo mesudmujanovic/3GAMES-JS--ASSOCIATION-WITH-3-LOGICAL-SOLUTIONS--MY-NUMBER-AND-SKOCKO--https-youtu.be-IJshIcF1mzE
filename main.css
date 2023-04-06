@@ -1,0 +1,630 @@
+body {
+  background-color: aqua;
+}
+
+.naslov {
+  text-align: center;
+}
+
+.app-div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.app-div.hide {
+  display: none;
+}
+
+.animacijaVelikihBrojevi::before {
+  position: relative;
+  content: "10";
+  animation: animate2 infinite 0.3s;
+}
+
+@keyframes animate2 {
+  0% {
+    content: "10";
+  }
+  15% {
+    content: "20";
+  }
+  35% {
+    content: "25";
+  }
+  70% {
+    content: "75";
+  }
+  100% {
+    content: "100";
+  }
+}
+
+.animacija::before {
+  position: relative;
+  content: "10";
+  animation: animate infinite 0.3s;
+  font-size: 20px;
+}
+
+@keyframes animate {
+  0% {
+    content: "1";
+  }
+  10% {
+    content: "2";
+  }
+  25% {
+    content: "5";
+  }
+  50% {
+    content: "9";
+  }
+  75% {
+    content: "8";
+  }
+}
+
+#animacija.hide {
+  display: none;
+}
+
+.container {
+  display: flex;
+  width: 600px;
+  height: 50px;
+  justify-content: space-between;
+}
+
+.container div {
+  background-color: antiquewhite;
+  width: 10%;
+  margin: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#pet,
+#sest {
+  width: 23%;
+  margin-left: 50px;
+}
+
+#jedan,
+#dva,
+#tri,
+#cetiri,
+#pet,
+#sest {
+  background-color: blue;
+  color: wheat;
+  border: 3px solid wheat;
+}
+
+.h1 {
+  position: relative;
+  width: 100%;
+  height: 100px;
+}
+
+.findNumber {
+  width: 100px;
+  position: absolute;
+  left: 40%;
+  top: 50%;
+  background-color: blue;
+  border: 3px solid wheat;
+  color: wheat;
+}
+
+#start {
+  width: 60%;
+  border-radius: 7px;
+  color: wheat;
+  padding: 8px;
+  background-color: blue;
+  margin-top: 20px;
+}
+
+#start:hover {
+  padding: 8px;
+  background-color: black;
+  color: aqua;
+  border: 1px solid white;
+}
+
+.calcBorder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 300px;
+  margin-bottom: 50px;
+}
+
+.calculator input {
+  text-align: center;
+  width: 100%;
+  height: 40px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  background-color: aqua;
+  color: black;
+}
+
+.calculator button {
+  width: 50px;
+  color: aqua;
+  background-color: black;
+}
+
+.calculator button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.calculator.hide {
+  display: none;
+}
+
+#textObjasnjenje.hide {
+  display: none;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+.objasnjenjeButt {
+  border-radius: 7px;
+  color: wheat;
+  padding: 8px;
+  background-color: blue;
+  cursor: pointer;
+}
+
+#objasnjenje.hide {
+  display: none;
+}
+
+/* NEW GAME SLAGALICA */
+
+#slagalica {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  width: 150px;
+  text-align: center;
+  border: 2px solid white;
+  border-radius: 5px;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.start-skocko-game{
+  cursor: pointer;
+  background-color: brown;
+  color: white;
+  width: 150px;
+  text-align: center;
+  border: 2px solid white;
+  border-radius: 5px;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.start-skocko-game.hide{
+  display: none;
+}
+
+.container-slagalica {
+  height: 90vh;
+}
+
+.container-slagalica.hide {
+  display: none;
+}
+
+.column {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 50%;
+}
+
+.column2 {
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.top-left2,
+.top-left4,
+.top-right2,
+.top-right4 {
+  margin: 2px;
+}
+
+.top-left1,
+.top-left2,
+.top-left3,
+.top-left4,
+.top-left-konacno,
+.top-right1,
+.top-right2,
+.top-right3,
+.top-right4,
+.top-right-konacno,
+.bottom-left1,
+.bottom-left2,
+.bottom-left3,
+.bottom-left4,
+.bottom-left-konacno,
+.bottom-right1,
+.bottom-right2,
+.bottom-right3,
+.bottom-right4,
+.bottom-right-konacno {
+  background-color: red;
+  color: aliceblue;
+  position: relative;
+  border-radius: 5px;
+  border: 2px solid blue;
+  text-align: center;
+  margin: 20px;
+  cursor: pointer;
+  height: 25px;
+}
+
+.top-left1 {
+  left: 0;
+  top: 0px;
+  width: 300px;
+}
+
+.top-left2 {
+  left: 25px;
+}
+
+.top-left3 {
+  left: 50px;
+}
+
+.top-left4 {
+  left: 75px;
+}
+
+.top-left-konacno {
+  left: 110px;
+  bottom: 15px;
+}
+
+.top-right1 {
+  right: 0px;
+  width: 300px;
+}
+
+.top-right2 {
+  right: 25px;
+}
+
+.top-right3 {
+  right: 50px;
+}
+
+.top-right4 {
+  right: 75px;
+}
+
+.top-right-konacno {
+  right: 110px;
+  bottom: 15px;
+}
+
+.bottom-left1 {
+  width: 300px;
+  right: 80px;
+}
+
+.bottom-left2 {
+  right: 50px;
+}
+
+.bottom-left3 {
+  right: 20px;
+}
+
+.bottom-left4 {
+  right: 0px;
+}
+
+.bottom-left-konacno {
+  right: 110px;
+  top: 15px;
+}
+
+.bottom-right1 {
+  width: 300px;
+  left: 80px;
+}
+
+.bottom-right2 {
+  left: 50px;
+}
+
+.bottom-right3 {
+  left: 20px;
+}
+
+.bottom-right4 {
+  left: 0px;
+}
+
+.bottom-right-konacno {
+  left: 110px;
+  top: 15px;
+}
+
+.konacnoresenje {
+  background-color: red;
+  width: 40%;
+  margin-left: 30%;
+  height: 30px;
+  text-align: center;
+}
+
+.inputAll {
+  background-color: red;
+  width: 85%;
+  height: 30px;
+}
+
+
+
+@media (max-width: 1050px) {
+  .top-left1,
+  .top-left2,
+  .top-left3,
+  .top-left4,
+  .top-left-konacno,
+  .top-right1,
+  .top-right2,
+  .top-right3,
+  .top-right4,
+  .top-right-konacno,
+  .bottom-left1,
+  .bottom-left2,
+  .bottom-left3,
+  .bottom-left4,
+  .bottom-left-konacno,
+  .bottom-right1,
+  .bottom-right2,
+  .bottom-right3,
+  .bottom-right4,
+  .bottom-right-konacno {
+    width: 170px;
+  }
+  .konacnoresenje {
+    margin-left: 30%;
+  }
+}
+
+@media (max-width: 950px) {
+  .container {
+    justify-content: center;
+  }
+  .container div {
+    width: 5%;
+    flex-wrap: wrap;
+  }
+  #pet,
+  #sest {
+    width: 13%;
+    margin-left: 0px;
+  }
+  .objasnjenjeButt {
+    position: absolute;
+    top: 75%;
+    left: 40%;
+  }
+  #textObjasnjenje {
+    position: absolute;
+    top: 80%;
+    left: 40%;
+  }
+  #slagalica {
+    display: none;
+  }
+}
+
+/* skocko-start */
+body {
+  box-sizing: border-box;
+}
+
+.container-quiz-skocko {
+  margin: 50px auto;
+  width: 600px;
+  display: flex;
+  position: relative;
+}
+
+.signDiv {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 65vh;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.divHits {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 45vh;
+  align-items: start;
+  justify-content: space-between;
+}
+
+#signs-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign {
+  text-align: center;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.red-text {
+  color: red;
+  background-color: red;
+  width: 30px;
+  height: 20px;
+  border-radius: 50%;
+  margin-left: 5px;
+}
+
+.yellow-text {
+  color: yellow;
+  background-color: yellow;
+  width: 30px;
+  height: 20px;
+  border-radius: 50%;
+  margin-left: 5px;
+}
+
+.black-text {
+  color: black;
+  background-color: black;
+  width: 30px;
+  height: 20px;
+  border-radius: 50%;
+  margin-left: 5px;
+}
+
+.hit {
+  display: flex;
+  width: 100%;
+  height: 80px;
+}
+
+.button-skocko {
+  position: absolute;
+  bottom: 0px;
+  right: 28%;
+  width: 40%;
+  border-radius: 10px;
+}
+
+.button-skocko:hover {
+  cursor: pointer;
+  border: 3px solid aqua;
+}
+
+#clear-button {
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#clear-button:hover {
+  border: 3px solid aqua;
+}
+
+.hide{
+  display: none;
+}
+
+/* skocko-end */
+
+
+
+
+@media (max-width: 830px) {
+  .bottom-right-konacno {
+    left: 80px;
+  }
+  .bottom-left-konacno {
+    right: 80px;
+  }
+  .top-left-konacno {
+    left: 80px;
+  }
+  .top-right-konacno {
+    right: 80px;
+  }
+  .konacnoresenje {
+    right: 50%;
+  }
+}
+
+@media (max-width: 660px) {
+  #button-skocko {
+    left: 40%;
+    bottom: 55px;
+    width: 80px;
+  }
+
+}
+
+@media (max-width: 710px) {
+  .top-left1,
+  .top-left2,
+  .top-left3,
+  .top-left4,
+  .top-left-konacno {
+    left: 0;
+  }
+  .top-right1,
+  .top-right2,
+  .top-right3,
+  .top-right4,
+  .top-right-konacno {
+    right: 0;
+  }
+  .bottom-left1,
+  .bottom-left2,
+  .bottom-left3,
+  .bottom-left4,
+  .bottom-left-konacno {
+    right: 0;
+  }
+  .bottom-right1,
+  .bottom-right2,
+  .bottom-right3,
+  .bottom-right4,
+  .bottom-right-konacno {
+    left: 0;
+  }
+
+  .konacnoresenje {
+    left: 33%;
+  }
+  @media (max-width: 660px) {
+    .button-skocko {
+      left: 40%;
+      bottom: 55px;
+      width: 80px;
+    }
+  
+    ;
+  }
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <div class="calcBorder">
+      <div class="calculator hide">
+        <input type="text" placeholder="0" id="outputScreen" />
+        <button onclick="Clear()">CL</button>
+        <button onclick="del()">Del</button>
+        <button onclick="display(')')">)</button>
+        <button onclick="display('(')">(</button>
+        <button onclick="display('/')">/</button>
+        <button onclick="display('%')">%</button>
+        <button onclick="display('7')">7</button>
+        <button onclick="display('8')">8</button>
+        <button onclick="display('9')">9</button>
+        <button onclick="display('4')">4</button>
+        <button onclick="display('5')">5</button>
+        <button onclick="display('6')">6</button>
+        <button onclick="display('1')">1</button>
+        <button onclick="display('2')">2</button>
+        <button onclick="display('3')">3</button>
+        <button onclick="Calculate('=')" class="equal">=</button>
+        <button onclick="display('+')">+</button>
+        <button onclick="display('-')">-</button>
+        <button onclick="display('*')">*</button>
+        <button onclick="display('0')">0</button>
+      </div>
+    </div>
+
+    <div class="app-div">
+      <h1 class="h1"></h1>
+      <div class="container">
+        <div class="animacija" id="jedan"></div>
+        <div id="dva"></div>
+        <div id="tri"></div>
+        <div id="cetiri"></div>
+        <div id="pet"></div>
+        <div id="sest"></div>
+      </div>
+      <button id="start">Stop</button>
+    </div>
+    <div id="objasnjenje">
+      <button onclick="objasnjenje()" class="objasnjenjeButt">
+        Objasnjenje
+      </button>
+      <h4 id="textObjasnjenje" class="hide">
+        Pronadji broj uz pomoc 6 brojeva <br />
+        koji su nasumicno izvuceni <br />
+        pomocu calculatora, srecno!
+      </h4>
+    </div>
+
+    <div id="slagalica">Klick for next game</div>
+    <div class="start-skocko-game hide">Klick for next game</div>
+    <div class="container-slagalica hide">
+      <div class="column">
+        <div class="top-left">
+          <div class="top-left1">A1</div>
+          <div class="top-left2">A2</div>
+          <div class="top-left3">A3</div>
+          <div class="top-left4">A4</div>
+          <!-- <div class="top-left-konacno"> -->
+          <input type="text" class="inputAll top-left-konacno" />
+          <!-- </div> -->
+        </div>
+        <div class="top-right">
+          <div onclick="showTextB(event)" class="top-right1">B1</div>
+          <div onclick="showTextB(event)" class="top-right2">B2</div>
+          <div onclick="showTextB(event)" class="top-right3">B3</div>
+          <div onclick="showTextB(event)" class="top-right4">B4</div>
+          <!-- <div class="top-right-konacno">=</div> -->
+          <input
+            onkeyup="showResB(event)"
+            type="text"
+            class="inputAll top-right-konacno"
+          />
+        </div>
+      </div>
+      <input
+        onkeyup="showFinallRes(event)"
+        class="konacnoresenje"
+        type="text"
+        name=""
+        id=""
+        placeholder="FINALL RESULT"
+      />
+      <div class="column2">
+        <div class="bottom-right">
+          <input
+            onkeyup="showResC(event)"
+            type="text"
+            class="inputAll bottom-right-konacno"
+          />
+          <div class="bottom-right1">C1</div>
+          <div class="bottom-right2">C2</div>
+          <div class="bottom-right3">C3</div>
+          <div class="bottom-right4">C4</div>
+        </div>
+        <div class="bottom-left">
+          <input type="text" class="inputAll bottom-left-konacno" />
+          <div class="bottom-left1">D1</div>
+          <div class="bottom-left2">D2</div>
+          <div class="bottom-left3">D3</div>
+          <div class="bottom-left4">D4</div>
+        </div>
+      </div>
+    </div>
+  <!-- skocko-start -->
+  <div class="container-quiz-skocko hide">
+    <div class="signDiv">
+      <div class="arr1-1"></div>
+      <div class="arr1-2"></div>
+      <div class="arr1-3"></div>
+      <div class="arr1-4"></div>
+      <div class="arr1-5"></div>
+      <div class="arr1-6"></div>
+    </div>
+    <div class="divHits">
+      <div class="hit"></div>
+      <div class="hit"></div>
+      <div class="hit"></div>
+      <div class="hit"></div>
+      <div class="hit"></div>
+      <div class="hit"></div>
+      <div class="hit"></div>
+      <div class="hit"></div>
+    </div>
+  </div>
+  <div class="skockoBtn hide">
+    <button id="clear-button">Clear</button>
+  <button id="button-skocko" class="button-skocko">Confirm</button>
+  <div id="signs-container"></div>
+  <p class="text">
+    "Click on 4 images and click confirm to start the game. More or less than 4 images will not be valid and you will not be able to click confirm. The red circle means you have guessed one image correctly and it's in the correct position, the yellow circle means you have guessed an image correctly but it's not in the correct position. The black circle means you have not guessed the image or the position correctly. Watch how to play on Youtube Slagalica-skocko"
+  </p>
+  </div>
+  <!-- skocko-end -->
+  </body>
+  <script src="./main.js"></script>
+</html>
